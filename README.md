@@ -39,3 +39,24 @@ If you are interested in build app locally you will have installed:
 1. Download Expo app from Google store
 2. Scan [QR code](https://expo.io/@maskam/projects/lego-mobile-client) from downloaded earlier app
 3. Setup api URL to API from [ngrok](https://ngrok.com/download)
+
+
+## API
+
+The API has been written in .NET Core 5
+
+### Requirements
+
+- Installed .NET Core 5 SDK
+- Installed .NET Core Runtime
+- Installed FMPEG library. For Windows you can get it from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/), you'll have to have dll's
+- Downloaded Ngrok
+
+### Install
+
+1. Clone the [Source Code](https://github.com/LEGO-Sorting/Lego.Server)
+2. If you are on Windows, setup path to FMPEG library in Startup. It is done by changing variable `currentDirectory`. By default it is output directory for `Lego.Server.WebAPI`
+2. Run app with environment variable `ASPNETCORE_URLS=http://localhost:5001`
+3. Run Ngrok using command `ngrok http 5001`. The URI generated with https protocol will be URI recognized by mobile app
+
+
