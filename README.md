@@ -29,10 +29,11 @@ If you are interested in build app locally you will have installed:
 - `npm` or `yarn` (recommended)
 - Expo app installed on your android device
 
-1. Use `expo install` command to install or update libraries
-2. Use `expo start` command to run app locally
-3. Scan QR code using expo app on your mobile device (remember to have allowed port displayed in terminal)
-4. Setup api URL to API from [ngrok](https://ngrok.com/download)
+1. Clone [Source Code](https://github.com/LEGO-Sorting/lego-mobile-client)
+2. Use `expo install` command to install or update libraries
+3. Use `expo start` command to run app locally
+4. Scan QR code using expo app on your mobile device (remember to have allowed port displayed in terminal)
+5. Setup api URL to API from [ngrok](https://ngrok.com/download)
 
 #### Deployed
 
@@ -43,7 +44,7 @@ If you are interested in build app locally you will have installed:
 
 ## API
 
-The API has been written in .NET Core 5
+The API has been written in .NET Core 5. The aim of that microservice is receive recorded videos and split it into frames and send them into recognition service. 
 
 ### Requirements
 
@@ -59,4 +60,19 @@ The API has been written in .NET Core 5
 2. Run app with environment variable `ASPNETCORE_URLS=http://localhost:5001`
 3. Run Ngrok using command `ngrok http 5001`. The URI generated with https protocol will be URI recognized by mobile app
 
+
+## Recognition Service
+
+The microservice wirtten in Python and Flask for client. Aim of that service is use trained model and display results in web client.
+
+### Required
+- Python 3.8
+- Anaconda (Recomended)
+- PyCharm (Recommended)
+
+### Install
+
+1. Clone the [Source Code](https://github.com/LEGO-Sorting/lego-recognition-service)
+2. Use `pip install -r requirements.txt` to install all needed libraries to run app
+3. Run app
 
